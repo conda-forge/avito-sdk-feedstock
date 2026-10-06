@@ -1,5 +1,5 @@
 context:
-  version: "0.1.0"
+  version: "0.1.5"
 
 package:
   name: avito-sdk
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/avito-sdk/avito_sdk-${{ version }}.tar.gz
-  sha256: d363d25238239d15c32526835b970b9baaea52a5dfde35c19c66b2ae70599649
+  sha256: a25e170afabb01fe706dab3c2e8e1958fa45db887852127958c6901615496a63
 
 build:
   number: 0
@@ -18,6 +18,7 @@ build:
       - avito = avito_sdk.cli:main
       - avito-sdk = avito_sdk.cli:main
       - avito-parser = avito_sdk.cli:main
+      - avito-mcp = avito_sdk.mcp_server:main_mcp
 
 requirements:
   host:
@@ -36,10 +37,12 @@ tests:
         - "*"
       imports:
         - avito_sdk
+        - avito_sdk.mcp_server
       pip_check: true
   - script:
       - avito-sdk --help
       - avito --help
+      - avito-mcp --help
 
 about:
   homepage: https://github.com/eminsk/avito-sdk
