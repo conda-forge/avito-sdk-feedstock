@@ -1,5 +1,5 @@
 context:
-  version: "0.4.2"
+  version: "0.4.3"
 
 package:
   name: avito-sdk
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/avito-sdk/avito_sdk-${{ version }}.tar.gz
-  sha256: 86b9ece394fd6de2b8aeb8163e60e250770a3d67b386e71602e93287f23c0e9e
+  sha256: db22ab336633c2ad193d50a5039a81949eb8ac04483b7d24340e3049a4d4870e
 
 build:
   number: 0
